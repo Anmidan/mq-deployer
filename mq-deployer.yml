@@ -1,0 +1,20 @@
+# mq-deployer consumer config
+uri: amqp://jenkins:jenkins@114.215.169.170:5672/%2F
+exchange: jenkins-v2
+tasks:
+  - name: csc
+    destination: /data/docker-ccms/www.stage
+    router: ccms.csc.stage
+
+  - name: csc
+    destination: /data/docker-ccms/www.qa
+    router: ccms.csc.qa
+
+  - name: customer
+    destination: /data/docker-ccms/www.stage
+    router: ccms.customer.stage
+
+  - name: customer
+    destination: /data/docker-ccms/www.qa
+    router: ccms.customer.qa
+
